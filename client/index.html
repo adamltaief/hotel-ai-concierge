@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sahara Beach AI Concierge</title>
+
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ==================================================
+         WELCOME PAGE
+         ================================================== -->
+
+    <div id="welcome-page">
+
+        <!-- Background -->
+        <div
+            class="welcome-background"
+            id="welcome-background"
+        ></div>
+
+        <!-- Dark overlay -->
+        <div class="welcome-overlay"></div>
+
+
+        <!-- ==================================================
+             HEADER
+             ================================================== -->
+
+        <header class="welcome-header">
+
+            <!-- Hotel Logo -->
+            <div class="hotel-logo">
+
+               <span class="logo-symbol">
+                 <img src="images/logo.png" alt="Sahara Beach Logo">
+                </span>     
+
+                <div>
+
+                    <h1>
+                        SAHARA BEACH
+                    </h1>
+
+                    <span>
+                        AQUAPARK RESORT
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="welcome-navigation">
+
+                <a
+                    href="#"
+                    data-i18n="navHome"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="#about"
+                    data-i18n="navAbout"
+                >
+                    About
+                </a>
+
+                <a
+                    href="#contact"
+                    data-i18n="navContact"
+                >
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- Language Selector -->
+            <div class="language-selector">
+
+                <select
+                    id="language-selector"
+                    aria-label="Choose language"
+                >
+
+                    <option value="English">
+                         English
+                    </option>
+
+                    <option value="French">
+                         Français
+                    </option>
+
+                    <option value="German">
+                         Deutsch
+                    </option>
+
+                    <option value="Arabic">
+                         العربية
+                    </option>
+
+                </select>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==================================================
+             HERO
+             ================================================== -->
+
+        <section class="welcome-hero">
+
+            <div class="welcome-content">
+
+                <p
+                    class="welcome-label"
+                    id="welcome-label"
+                >
+                    WELCOME TO SAHARA BEACH
+                </p>
+
+
+                <h2 id="welcome-title">
+
+                    Your Mediterranean
+                    <br>
+                    Escape
+
+                </h2>
+
+
+                <p
+                    class="welcome-description"
+                    id="welcome-description"
+                >
+                    Relax, discover and enjoy an unforgettable
+                    stay by the Mediterranean Sea.
+                </p>
+
+
+                <button
+                    class="welcome-chat-button"
+                    id="welcome-chat-button"
+                    onclick="openConcierge()"
+                >
+
+                    <span id="welcome-chat-text">
+                        Chat with our Concierge
+                    </span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             BOTTOM INFORMATION
+             ================================================== -->
+
+        <div class="welcome-bottom">
+
+            <div>
+
+                <span
+                    class="info-label"
+                    id="location-label"
+                >
+                    LOCATION
+                </span>
+
+                <span id="location-value">
+                    Monastir, Tunisia
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <span
+                    class="info-label"
+                    id="experience-label"
+                >
+                    EXPERIENCE
+                </span>
+
+                <span id="experience-value">
+                    Beach · Relaxation · Hospitality
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <span
+                    class="info-label"
+                    id="concierge-label"
+                >
+                    CONCIERGE
+                </span>
+
+                <span id="concierge-value">
+                    Available to assist you
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         CHAT BUTTON
+         ================================================== -->
+
+    <button
+        class="chat-button"
+        id="chat-button"
+        aria-label="Open AI Concierge"
+    >
+        💬
+    </button>
+
+
+    <!-- ==================================================
+         CHATBOT
+         ================================================== -->
+
+    <div class="chat-box">
+
+        <div class="chat-header">
+
+            <div class="assistant-info">
+
+                <div class="assistant-avatar">
+                    🌴
+                </div>
+
+                <div>
+
+                    <strong id="chatbot-name">
+                        Sahara Beach Concierge
+                    </strong>
+
+                    <span id="chatbot-status">
+                        ● Online
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="close-chat"
+                id="close-chat"
+                aria-label="Close chat"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- Messages -->
+
+        <div class="messages">
+
+            <div class="bot-message">
+
+                <div class="message-avatar">
+                    🌴
+                </div>
+
+                <div class="message-content">
+
+                    <span
+                        class="message-name"
+                        id="message-name"
+                    >
+                        Sahara Beach Concierge
+                    </span>
+
+                    <p id="welcome-message">
+
+                        👋 Welcome to Sahara Beach!
+
+                        <br><br>
+
+                        I'm your AI concierge.
+                        How can I help you?
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Input -->
+
+        <div class="chat-input">
+
+            <input
+                id="chat-input"
+                type="text"
+                placeholder="Ask me anything..."
+                autocomplete="off"
+            >
+
+            <button
+                id="send-button"
+                type="button"
+                aria-label="Send message"
+            >
+                ➤
+            </button>
+
+        </div>
+
+
+        <div
+            class="powered-by"
+            id="powered-by"
+        >
+            AI Concierge
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

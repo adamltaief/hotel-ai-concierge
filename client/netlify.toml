@@ -1,0 +1,16 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  included_files = ["knowledge/hotel-info.txt"]
+
+[[redirects]]
+  from = "/"
+  to = "/client/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 200
