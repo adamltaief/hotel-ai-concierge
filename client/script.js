@@ -341,7 +341,7 @@ if (welcomeBackground) {
 
 
         image.style.backgroundImage =
-            `url("/images/sahara%20beach%20%20(${currentImage}).jpg")`;
+    `url("/images/sahara%20beach%20%20(${currentImage}).jpg")`;
 
 
         welcomeBackground.appendChild(
