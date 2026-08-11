@@ -1,14 +1,9 @@
 [build]
-  publish = "."
-  functions = "netlify/functions"
+  publish = "client"
+  functions = "server/netlify/functions"
 
 [functions]
   included_files = ["knowledge/hotel-info.txt"]
-
-[[redirects]]
-  from = "/"
-  to = "/client/index.html"
-  status = 200
 
 [[redirects]]
   from = "/api/chat"
