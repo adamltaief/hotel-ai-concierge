@@ -1,11 +1,21 @@
 [build]
-  publish = "client"
-  functions = "server/netlify/functions"
+publish = "."
 
 [functions]
-  included_files = ["knowledge/hotel-info.txt"]
+directory = "server/netlify/functions"
+included_files = ["knowledge/hotel-info.txt"]
 
 [[redirects]]
-  from = "/api/chat"
-  to = "/.netlify/functions/chat"
-  status = 200
+from = "/"
+to = "/client/index.html"
+status = 200
+
+[[redirects]]
+from = "/images/*"
+to = "/public/images/:splat"
+status = 200
+
+[[redirects]]
+from = "/api/chat"
+to = "/.netlify/functions/chat"
+status = 200
