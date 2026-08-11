@@ -316,81 +316,140 @@ if (input) {
 
 // ==========================================================
 // SAHARA BEACH WELCOME BACKGROUND
+// Smooth preloaded slideshow
 // ==========================================================
 
 const welcomeBackground =
-    document.getElementById(
-        "welcome-background"
-    );
-
+    document.getElementById("welcome-background");
 
 if (welcomeBackground) {
 
     let currentImage = 1;
-
     const totalImages = 30;
+    const transitionTime = 2000;
+    const displayTime = 10000;
 
+    // Create two background layers
+    const layer1 = document.createElement("div");
+    const layer2 = document.createElement("div");
 
-    function changeBackground() {
+    layer1.className = "welcome-bg-image active";
+    layer2.className = "welcome-bg-image";
 
-        const image =
-            document.createElement("div");
+    welcomeBackground.appendChild(layer1);
+    welcomeBackground.appendChild(layer2);
 
-        image.className =
-            "welcome-bg-image";
+    let activeLayer = layer1;
+    let inactiveLayer = layer2;
 
+    // Get correct filename
+    function getImageUrl(number) {
 
-        image.style.backgroundImage =
-    `url("/images/sahara%20beach%20%20(${currentImage}).jpg")`;
-
-
-        welcomeBackground.appendChild(
-            image
-        );
-
-
-        setTimeout(() => {
-
-            image.classList.add(
-                "active"
-            );
-
-        }, 50);
-
-
-        const oldImages =
-            welcomeBackground.querySelectorAll(
-                ".welcome-bg-image"
-            );
-
-
-        if (oldImages.length > 2) {
-
-            oldImages[0].remove();
-
+        // Images 1-14 use .jpg
+        if (number <= 14) {
+            return `/images/sahara%20beach%20%20(${number}).jpg`;
         }
 
+        // Images 15-30 use .JPG
+        return `/images/sahara%20beach%20%20(${number}).JPG`;
+    }
 
-        currentImage++;
+    // Preload image
+    function preloadImage(number) {
 
+        return new Promise((resolve, reject) => {
 
-        if (currentImage > totalImages) {
+            const image = new Image();
 
-            currentImage = 1;
+            image.onload = () => {
+                resolve(image.src);
+            };
 
+            image.onerror = () => {
+                reject(
+                    new Error(
+                        `Could not load image ${number}`
+                    )
+                );
+            };
+
+            image.src = getImageUrl(number);
+
+        });
+
+    }
+
+    // Change background
+    async function changeBackground() {
+
+        let nextImage = currentImage + 1;
+
+        if (nextImage > totalImages) {
+            nextImage = 1;
+        }
+
+        try {
+
+            // Wait until next image is completely loaded
+            const imageUrl =
+                await preloadImage(nextImage);
+
+            // Put image on inactive layer
+            inactiveLayer.style.backgroundImage =
+                `url("${imageUrl}")`;
+
+            // Fade it in
+            inactiveLayer.classList.add("active");
+
+            // Wait for transition
+            setTimeout(() => {
+
+                activeLayer.classList.remove("active");
+
+                // Swap layers
+                const temp = activeLayer;
+
+                activeLayer = inactiveLayer;
+                inactiveLayer = temp;
+
+                currentImage = nextImage;
+
+            }, transitionTime);
+
+        } catch (error) {
+
+            console.error(
+                "Background image error:",
+                error
+            );
+
+            // Try the next image later
+            currentImage = nextImage;
         }
 
     }
 
+    // Load first image
+    preloadImage(currentImage)
+        .then((imageUrl) => {
 
-    // First image
-    changeBackground();
+            activeLayer.style.backgroundImage =
+                `url("${imageUrl}")`;
 
+        })
+        .catch((error) => {
 
-    // Next image every 10 seconds
+            console.error(
+                "First background image failed:",
+                error
+            );
+
+        });
+
+    // Change every 10 seconds
     setInterval(
         changeBackground,
-        10000
+        displayTime
     );
 
 }
