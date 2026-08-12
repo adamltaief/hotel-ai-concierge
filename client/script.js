@@ -537,7 +537,85 @@ const translations = {
 
         featureAllInclusive: "All Inclusive",
 
-        featureEntertainment: "Entertainment",    
+        featureEntertainment: "Entertainment",    facilitiesLabel:
+    "FACILITIES & SERVICES",
+
+facilitiesTitle:
+    "Everything You Need for a Perfect Stay",
+
+facilitiesDescription:
+    "Discover the facilities and services designed to make your stay at Sahara Beach relaxing, enjoyable and memorable.",
+
+facilityBeachTitle:
+    "Beach",
+
+facilityBeachText:
+    "Relax on the beautiful sandy beach and enjoy the Mediterranean Sea.",
+
+facilityAquaTitle:
+    "AquaPark",
+
+facilityAquaText:
+    "Have fun with exciting water attractions for an unforgettable family experience.",
+
+facilityPoolTitle:
+    "Swimming Pools",
+
+facilityPoolText:
+    "Enjoy relaxing moments and refreshing swims in the resort's swimming pools.",
+
+facilityRestaurantTitle:
+    "Restaurants",
+
+facilityRestaurantText:
+    "Discover delicious meals and enjoy a variety of dining experiences during your stay.",
+
+facilitySportsTitle:
+    "Sports & Activities",
+
+facilitySportsText:
+    "Stay active and enjoy a range of sports and activities for all ages.",
+
+facilityEntertainmentTitle:
+    "Entertainment",
+
+facilityEntertainmentText:
+    "Enjoy fun entertainment and activities throughout your stay.",
+    restaurantsLabel:
+    "RESTAURANTS & BARS",
+
+restaurantsTitle:
+    "Taste the Mediterranean",
+
+restaurantsDescription:
+    "Enjoy delicious dining experiences and discover a variety of flavors during your stay at Sahara Beach.",
+
+restaurantMainTitle:
+    "Main Restaurant",
+
+restaurantMainText:
+    "Enjoy a variety of meals and flavors in a welcoming setting for the whole family.",
+
+restaurantDiningTag:
+    "Dining",
+
+restaurantBarTitle:
+    "Bars",
+
+restaurantBarText:
+    "Relax with a refreshing drink and enjoy pleasant moments throughout the day.",
+
+restaurantBarTag:
+    "Refreshments",
+
+restaurantSnackTitle:
+    "Snacks",
+
+restaurantSnackText:
+    "Take a break and enjoy something tasty between your activities.",
+
+restaurantSnackTag:
+    "Snacks",
 
     },
 
@@ -703,6 +781,181 @@ const translations = {
 
     },
 
+        Spanish: {
+
+    welcomeLabel:
+        "BIENVENIDO A SAHARA BEACH",
+
+    titleLine1:
+        "Tu escapada",
+
+    titleLine2:
+        "mediterránea",
+
+    description:
+        "Relájate, descubre y disfruta de una estancia inolvidable junto al mar Mediterráneo.",
+
+    chatButton:
+        "Habla con nuestro concierge",
+
+    navHome:
+        "Inicio",
+
+    navAbout:
+        "Sobre nosotros",
+
+    navContact:
+        "Contacto",
+
+    locationLabel:
+        "UBICACIÓN",
+
+    locationValue:
+        "Monastir, Túnez",
+
+    experienceLabel:
+        "EXPERIENCIA",
+
+    experienceValue:
+        "Playa · Relax · Hospitalidad",
+
+    conciergeLabel:
+        "CONCIERGERÍA",
+
+    conciergeValue:
+        "Disponible para ayudarte",
+
+    chatbotName:
+        "Concierge Sahara Beach",
+
+    online:
+        "● En línea",
+
+    welcomeMessage:
+        "👋 ¡Bienvenido a Sahara Beach!<br><br>Soy tu concierge de IA.<br>¿Cómo puedo ayudarte?",
+
+    placeholder:
+        "Pregúntame lo que quieras...",
+
+    poweredBy:
+        "Concierge IA",
+
+    // ABOUT SECTION
+
+    aboutLabel:
+        "SOBRE SAHARA BEACH",
+
+    aboutTitle:
+        "Una escapada mediterránea para familias y amigos",
+
+    aboutText1:
+        "Sahara Beach AquaPark Resort está situado en Monastir, Túnez, directamente junto a una hermosa playa de arena con vistas al mar Mediterráneo.",
+
+    aboutText2:
+        "Disfruta de piscinas, un AquaPark, restaurantes, entretenimiento, actividades deportivas y momentos de relax para toda la familia.",
+
+    featureBeach:
+        "Playa",
+
+    featureAquaPark:
+        "AquaPark",
+
+    featureAllInclusive:
+        "Todo incluido",
+
+    featureEntertainment:
+        "Entretenimiento"
+
+},
+
+
+    Polish: {
+
+    welcomeLabel:
+        "WITAMY W SAHARA BEACH",
+
+    titleLine1:
+        "Twój śródziemnomorski",
+
+    titleLine2:
+        "wypoczynek",
+
+    description:
+        "Zrelaksuj się, odkrywaj i ciesz się niezapomnianym pobytem nad Morzem Śródziemnym.",
+
+    chatButton:
+        "Porozmawiaj z naszym concierge",
+
+    navHome:
+        "Strona główna",
+
+    navAbout:
+        "O nas",
+
+    navContact:
+        "Kontakt",
+
+    locationLabel:
+        "LOKALIZACJA",
+
+    locationValue:
+        "Monastir, Tunezja",
+
+    experienceLabel:
+        "DOŚWIADCZENIE",
+
+    experienceValue:
+        "Plaża · Relaks · Gościnność",
+
+    conciergeLabel:
+        "CONCIERGE",
+
+    conciergeValue:
+        "Dostępny, aby Ci pomóc",
+
+    chatbotName:
+        "Concierge Sahara Beach",
+
+    online:
+        "● Online",
+
+    welcomeMessage:
+        "👋 Witamy w Sahara Beach!<br><br>Jestem Twoim concierge AI.<br>Jak mogę Ci pomóc?",
+
+    placeholder:
+        "Zapytaj mnie o cokolwiek...",
+
+    poweredBy:
+        "Concierge AI",
+
+    // ABOUT SECTION
+
+    aboutLabel:
+        "O SAHARA BEACH",
+
+    aboutTitle:
+        "Śródziemnomorski wypoczynek dla rodzin i przyjaciół",
+
+    aboutText1:
+        "Sahara Beach AquaPark Resort znajduje się w Monastirze w Tunezji, bezpośrednio przy pięknej piaszczystej plaży z widokiem na Morze Śródziemne.",
+
+    aboutText2:
+        "Ciesz się basenami, AquaParkiem, restauracjami, rozrywką, zajęciami sportowymi oraz chwilami relaksu dla całej rodziny.",
+
+    featureBeach:
+        "Plaża",
+
+    featureAquaPark:
+        "AquaPark",
+
+    featureAllInclusive:
+        "All Inclusive",
+
+    featureEntertainment:
+        "Rozrywka"
+
+},
+
 
     Arabic: {
 
@@ -809,9 +1062,20 @@ function getCurrentTranslation() {
 // ==========================================================
 
 function changePageLanguage(language) {
+    const t = translations[language];
 
-    const t =
-        translations[language];
+   document
+    .querySelectorAll("[data-i18n]")
+    .forEach((element) => {
+
+        const key =
+            element.getAttribute("data-i18n");
+
+        if (t[key]) {
+            element.textContent = t[key];
+        }
+
+    });
 
 
     if (!t) {
@@ -1132,29 +1396,37 @@ const featureEntertainment =
     }
 
 
-    // Arabic direction
-    if (language === "Arabic") {
+    // ========================================
+// LANGUAGE DIRECTION
+// ========================================
 
-        document.documentElement.dir =
-            "rtl";
+if (language === "Arabic") {
 
-        document.documentElement.lang =
-            "ar";
+    document.documentElement.dir = "rtl";
+    document.documentElement.lang = "ar";
 
-    } else {
+} else {
 
-        document.documentElement.dir =
-            "ltr";
+    document.documentElement.dir = "ltr";
 
-        document.documentElement.lang =
-            language === "French"
-                ? "fr"
-                : language === "German"
-                    ? "de"
-                    : "en";
+    const languageCodes = {
 
-    }
+        English: "en",
 
+        French: "fr",
+
+        German: "de",
+
+        Spanish: "es",
+
+        Polish: "pl"
+
+    };
+
+    document.documentElement.lang =
+        languageCodes[language] || "en";
+
+}
 }
 
 

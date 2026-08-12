@@ -1250,3 +1250,271 @@ body {
     }
 
 }
+
+/* ==========================================================
+   RESTAURANTS & BARS
+   ========================================================== */
+
+.restaurants-section {
+    position: relative;
+    z-index: 2;
+
+    min-height: 100vh;
+
+    padding: 120px 8%;
+
+    color: white;
+}
+
+.restaurants-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================================
+   HEADING
+   ========================================================== */
+
+.restaurants-heading {
+    max-width: 700px;
+    margin-bottom: 60px;
+}
+
+.restaurants-heading .section-label {
+    margin-bottom: 18px;
+
+    color: #f4d58d;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+.restaurants-heading h2 {
+    margin: 0 0 22px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+.restaurants-intro {
+    max-width: 600px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   RESTAURANTS GRID
+   ========================================================== */
+
+.restaurants-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ==========================================================
+   RESTAURANT CARD
+   ========================================================== */
+
+.restaurant-card {
+    position: relative;
+
+    min-height: 270px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.20);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    backdrop-filter: blur(5px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.restaurant-card:hover {
+    transform:
+        translateY(-7px);
+
+    background:
+        rgba(255, 255, 255, 0.13);
+
+    border-color:
+        rgba(244, 213, 141, 0.55);
+}
+
+
+/* ==========================================================
+   ICON
+   ========================================================== */
+
+.restaurant-icon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(244, 213, 141, 0.15);
+
+    border:
+        1px solid
+        rgba(244, 213, 141, 0.35);
+
+    font-size: 25px;
+}
+
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.restaurant-content {
+    margin-top: 35px;
+}
+
+.restaurant-content h3 {
+    margin: 0 0 12px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 25px;
+
+    font-weight: 400;
+}
+
+.restaurant-content p {
+    max-width: 320px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.68);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   TAG
+   ========================================================== */
+
+.restaurant-tag {
+    margin-top: auto;
+
+    padding-top: 25px;
+
+    color:
+        #f4d58d;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .restaurants-section {
+        padding: 100px 7%;
+    }
+
+    .restaurants-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .restaurant-card:last-child {
+        grid-column:
+            span 2;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+    .restaurants-section {
+        padding:
+            80px 25px;
+    }
+
+    .restaurants-heading {
+        margin-bottom: 40px;
+    }
+
+    .restaurants-heading h2 {
+        font-size: 42px;
+    }
+
+    .restaurants-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .restaurant-card:last-child {
+        grid-column: auto;
+    }
+
+    .restaurant-card {
+        min-height: 230px;
+
+        padding: 25px;
+    }
+
+}
