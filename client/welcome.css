@@ -1,75 +1,153 @@
 /* ==========================================================
-   SAHARA BEACH - WELCOME PAGE
+   SAHARA BEACH - GLOBAL WELCOME PAGE
+   ========================================================== */
+
+
+/* ==========================================================
+   HTML / BODY
+   ========================================================== */
+
+html {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100%;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100%;
+
+    background: transparent;
+
+    color: white;
+}
+
+
+/* ==========================================================
+   GLOBAL PAGE CONTENT
+   ========================================================== */
+
+.site-content {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    background: transparent;
+}
+
+
+/* ==========================================================
+   WELCOME PAGE
    ========================================================== */
 
 #welcome-page {
     position: relative;
+
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
+
     color: white;
-    isolation: isolate;
+
+    background: transparent;
+
+    overflow: visible;
 }
 
+
 /* ==========================================================
-   BACKGROUND SLIDESHOW
+   GLOBAL BACKGROUND SLIDESHOW
    ========================================================== */
 
 .welcome-background {
-    position: absolute;
+    position: fixed;
+
     inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: -10;
+
     overflow: hidden;
+
     background: #111;
+
+    pointer-events: none;
 }
+
+
+/* Individual background image */
 
 .welcome-bg-image {
     position: absolute;
+
     inset: 0;
 
     width: 100%;
     height: 100%;
 
     background-size: cover;
+
     background-position: center;
+
     background-repeat: no-repeat;
 
     opacity: 0;
 
-    transition: opacity 2s ease-in-out;
+    transition:
+        opacity 1.5s ease-in-out;
 
     will-change: opacity;
+
+    transform: translateZ(0);
 }
+
+
+/* Active image */
 
 .welcome-bg-image.active {
     opacity: 1;
 }
 
+
 /* ==========================================================
-   DARK OVERLAY
+   GLOBAL DARK OVERLAY
    ========================================================== */
 
 .welcome-overlay {
-    position: absolute;
+    position: fixed;
+
     inset: 0;
-    z-index: -1;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: -9;
+
+    pointer-events: none;
 
     background:
         linear-gradient(
             90deg,
-            rgba(4, 34, 42, 0.78) 0%,
-            rgba(4, 34, 42, 0.48) 45%,
-            rgba(4, 34, 42, 0.20) 100%
+            rgba(4, 34, 42, 0.70) 0%,
+            rgba(4, 34, 42, 0.40) 45%,
+            rgba(4, 34, 42, 0.15) 100%
         ),
         linear-gradient(
             180deg,
-            rgba(0, 0, 0, 0.35) 0%,
-            rgba(0, 0, 0, 0.05) 45%,
-            rgba(0, 0, 0, 0.45) 100%
+            rgba(0, 0, 0, 0.30) 0%,
+            rgba(0, 0, 0, 0.05) 50%,
+            rgba(0, 0, 0, 0.35) 100%
         );
 }
+
 
 /* ==========================================================
    HEADER
@@ -77,15 +155,22 @@
 
 .welcome-header {
     position: relative;
+
     z-index: 10;
 
     width: 100%;
+
     padding: 30px 6%;
 
+    box-sizing: border-box;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
+
 
 /* ==========================================================
    HOTEL LOGO
@@ -93,42 +178,84 @@
 
 .hotel-logo {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 }
+
+
+/* Logo container */
 
 .logo-symbol {
     width: 42px;
     height: 42px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(255, 255, 255, 0.65);
+    overflow: hidden;
+
+    border: none;
+
     border-radius: 50%;
 
-    font-size: 19px;
+    flex-shrink: 0;
 }
+
+
+/* Actual logo */
+
+.logo-symbol img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* Hotel name */
 
 .hotel-logo h1 {
     margin: 0;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-size: 18px;
+
     font-weight: 500;
+
     letter-spacing: 3px;
 }
+
+
+/* Hotel subtitle */
 
 .hotel-logo div > span {
     display: block;
+
     margin-top: 3px;
 
-    color: rgba(255, 255, 255, 0.72);
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.72
+        );
 
     font-size: 8px;
+
     letter-spacing: 3px;
 }
+
 
 /* ==========================================================
    NAVIGATION
@@ -136,45 +263,64 @@
 
 .welcome-navigation {
     display: flex;
+
     align-items: center;
+
     gap: 32px;
 }
+
 
 .welcome-navigation a {
     position: relative;
 
-    color: rgba(255, 255, 255, 0.90);
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.90
+        );
 
     text-decoration: none;
 
     font-size: 12px;
+
     letter-spacing: 1px;
 
-    transition: color 0.2s ease;
+    transition:
+        color 0.2s ease;
 }
+
 
 .welcome-navigation a::after {
     content: "";
 
     position: absolute;
+
     left: 0;
+
     bottom: -7px;
 
     width: 0;
+
     height: 1px;
 
     background: white;
 
-    transition: width 0.2s ease;
+    transition:
+        width 0.2s ease;
 }
+
 
 .welcome-navigation a:hover {
     color: white;
 }
 
+
 .welcome-navigation a:hover::after {
     width: 100%;
 }
+
 
 /* ==========================================================
    LANGUAGE SELECTOR
@@ -182,50 +328,86 @@
 
 .language-selector {
     position: relative;
+
     z-index: 20;
 }
+
 
 .language-selector select {
     appearance: none;
 
     width: 108px;
+
     height: 36px;
 
     padding: 0;
 
-    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.45
+        );
+
     border-radius: 20px;
 
-    background: rgba(0, 0, 0, 0.18);
-    backdrop-filter: blur(8px);
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
 
     color: white;
 
     font-size: 12px;
+
     text-align: center;
+
     text-align-last: center;
 
     cursor: pointer;
-    outline: none;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    outline: none;
 
     transition:
         background 0.2s ease,
         border-color 0.2s ease;
 }
 
+
 .language-selector select:hover {
-    background: rgba(0, 0, 0, 0.3);
-    border-color: rgba(255, 255, 255, 0.7);
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.30
+        );
+
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.70
+        );
 }
+
 
 .language-selector select option {
     background: #173b42;
+
     color: white;
+
+    text-align: center;
 }
+
 
 /* ==========================================================
    HERO
@@ -233,21 +415,35 @@
 
 .welcome-hero {
     position: relative;
+
     z-index: 5;
 
-    min-height: calc(100vh - 105px);
+    min-height:
+        calc(
+            100vh - 105px
+        );
 
-    padding: 60px 8% 120px;
+    padding:
+        60px 8% 120px;
+
+    box-sizing: border-box;
 
     display: flex;
+
     align-items: center;
 }
+
 
 .welcome-content {
     max-width: 680px;
 
-    animation: welcomeFadeIn 0.9s ease both;
+    animation:
+        welcomeFadeIn
+        0.9s
+        ease
+        both;
 }
+
 
 /* ==========================================================
    WELCOME LABEL
@@ -259,9 +455,12 @@
     color: #f4d58d;
 
     font-size: 11px;
+
     font-weight: 600;
+
     letter-spacing: 4px;
 }
+
 
 /* ==========================================================
    MAIN TITLE
@@ -270,14 +469,25 @@
 .welcome-content h2 {
     margin: 0 0 24px;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    font-size: clamp(52px, 7vw, 92px);
+    font-size:
+        clamp(
+            52px,
+            7vw,
+            92px
+        );
+
     font-weight: 400;
 
     line-height: 0.98;
+
     letter-spacing: -2px;
 }
+
 
 /* ==========================================================
    DESCRIPTION
@@ -288,11 +498,19 @@
 
     margin-bottom: 34px;
 
-    color: rgba(255, 255, 255, 0.86);
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.86
+        );
 
     font-size: 16px;
+
     line-height: 1.7;
 }
+
 
 /* ==========================================================
    WELCOME CHAT BUTTON
@@ -300,22 +518,42 @@
 
 .welcome-chat-button {
     display: inline-flex;
+
     align-items: center;
+
     gap: 22px;
 
-    padding: 14px 17px 14px 22px;
+    padding:
+        14px
+        17px
+        14px
+        22px;
 
-    border: 1px solid rgba(255, 255, 255, 0.55);
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
     border-radius: 40px;
 
-    background: rgba(255, 255, 255, 0.12);
-
-    backdrop-filter: blur(8px);
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
 
     color: white;
 
     font-size: 12px;
+
     font-weight: 600;
+
     letter-spacing: 0.5px;
 
     cursor: pointer;
@@ -325,16 +563,29 @@
         transform 0.25s ease;
 }
 
+
 .welcome-chat-button:hover {
-    background: rgba(255, 255, 255, 0.22);
-    transform: translateY(-2px);
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.22
+        );
+
+    transform:
+        translateY(-2px);
 }
+
+
+/* Arrow */
 
 .button-arrow {
     width: 32px;
     height: 32px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -346,12 +597,17 @@
 
     font-size: 16px;
 
-    transition: transform 0.25s ease;
+    transition:
+        transform 0.25s ease;
 }
 
-.welcome-chat-button:hover .button-arrow {
-    transform: translateX(3px);
+
+.welcome-chat-button:hover
+.button-arrow {
+    transform:
+        translateX(3px);
 }
+
 
 /* ==========================================================
    BOTTOM INFORMATION
@@ -362,54 +618,343 @@
 
     left: 6%;
     right: 6%;
+
     bottom: 28px;
 
     z-index: 5;
 
     display: flex;
+
     justify-content: space-between;
 
     padding-top: 18px;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.25
+        );
 }
+
 
 .welcome-bottom > div {
     display: flex;
+
     flex-direction: column;
+
     gap: 5px;
 }
 
+
 .welcome-bottom span:last-child {
-    color: rgba(255, 255, 255, 0.82);
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.82
+        );
 
     font-size: 10px;
+
     letter-spacing: 0.5px;
 }
 
+
 .info-label {
-    color: rgba(255, 255, 255, 0.50);
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.50
+        );
 
     font-size: 8px;
+
     font-weight: 600;
+
     letter-spacing: 2px;
 }
 
+
 /* ==========================================================
-   ANIMATION
+   ABOUT SECTION
+   ========================================================== */
+
+.about-section {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding:
+        120px 8%;
+
+    box-sizing: border-box;
+
+    background: transparent;
+
+    color: white;
+}
+
+
+.about-container {
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+.about-content {
+    max-width: 800px;
+}
+
+
+.about-content .section-label {
+    margin-bottom: 20px;
+
+    color: #f4d58d;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+
+.about-content h2 {
+    margin:
+        0 0 30px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            40px,
+            5vw,
+            64px
+        );
+
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+
+.about-content p {
+    max-width: 700px;
+
+    margin-bottom: 20px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.88
+        );
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   ABOUT FEATURES
+   ========================================================== */
+
+.about-features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 45px;
+}
+
+
+.feature-card {
+    padding: 25px 15px;
+
+    text-align: center;
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.20
+        );
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.feature-card:hover {
+    transform:
+        translateY(-5px);
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.28
+        );
+}
+
+
+.feature-card span {
+    font-size: 28px;
+}
+
+
+.feature-card h4 {
+    margin:
+        12px 0 0;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* ==========================================================
+   CONTACT SECTION
+   ========================================================== */
+
+.contact-section {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    min-height: 70vh;
+
+    padding:
+        120px 8%;
+
+    box-sizing: border-box;
+
+    background: transparent;
+
+    color: white;
+}
+
+
+.contact-container {
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+
+.contact-section .section-label {
+    margin-bottom: 20px;
+
+    color: #f4d58d;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+
+.contact-section h2 {
+    margin:
+        0 0 25px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            40px,
+            5vw,
+            64px
+        );
+
+    font-weight: 400;
+}
+
+
+.contact-section p {
+    max-width: 650px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.85
+        );
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   FADE IN ANIMATION
    ========================================================== */
 
 @keyframes welcomeFadeIn {
+
     from {
+
         opacity: 0;
-        transform: translateY(20px);
+
+        transform:
+            translateY(20px);
+
     }
 
     to {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
+
     }
+
 }
+
 
 /* ==========================================================
    TABLET
@@ -418,26 +963,61 @@
 @media (max-width: 800px) {
 
     .welcome-header {
-        padding: 24px 5%;
+
+        padding:
+            24px 5%;
+
     }
+
 
     .welcome-navigation {
+
         gap: 18px;
+
     }
+
 
     .welcome-navigation a {
+
         font-size: 11px;
+
     }
+
 
     .welcome-hero {
-        padding: 50px 7% 140px;
+
+        padding:
+            50px 7% 140px;
+
     }
 
+
     .welcome-bottom {
+
         left: 7%;
+
         right: 7%;
+
     }
+
+
+    .about-section {
+
+        padding:
+            100px 7%;
+
+    }
+
+
+    .contact-section {
+
+        padding:
+            100px 7%;
+
+    }
+
 }
+
 
 /* ==========================================================
    MOBILE
@@ -446,80 +1026,227 @@
 @media (max-width: 600px) {
 
     .welcome-header {
-        padding: 20px 22px;
+
+        padding:
+            20px 22px;
+
     }
+
 
     .welcome-navigation {
+
         display: none;
+
     }
+
 
     .hotel-logo h1 {
+
         font-size: 15px;
+
         letter-spacing: 2px;
+
     }
+
+
+    .hotel-logo div > span {
+
+        font-size: 7px;
+
+        letter-spacing: 2px;
+
+    }
+
 
     .logo-symbol {
+
         width: 36px;
+
         height: 36px;
-        font-size: 16px;
+
     }
+
 
     .welcome-hero {
-        min-height: calc(100vh - 80px);
 
-        padding: 40px 25px 150px;
+        min-height:
+            calc(
+                100vh - 80px
+            );
+
+        padding:
+            40px
+            25px
+            150px;
 
         align-items: center;
+
     }
+
 
     .welcome-content h2 {
+
         font-size: 54px;
+
         letter-spacing: -1px;
+
     }
+
 
     .welcome-description {
+
         font-size: 14px;
+
     }
 
+
     .welcome-bottom {
+
         left: 25px;
+
         right: 25px;
+
         bottom: 20px;
 
         gap: 15px;
+
     }
+
 
     .welcome-bottom > div {
+
         min-width: 0;
+
     }
+
 
     .welcome-bottom span:last-child {
+
         font-size: 8px;
+
     }
+
 
     .welcome-bottom > div:nth-child(2) {
+
         display: none;
+
     }
+
 
     .language-selector select {
-        padding: 8px 10px;
+
+        width: 95px;
+
+        height: 34px;
+
         font-size: 11px;
+
     }
-}
-.logo-symbol {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 50%;
-    overflow: hidden;
+
+
+    .about-section {
+
+        min-height: auto;
+
+        padding:
+            100px 25px;
+
+    }
+
+
+    .about-content h2 {
+
+        font-size: 42px;
+
+    }
+
+
+    .about-content p {
+
+        font-size: 14px;
+
+    }
+
+
+    .about-features {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+
+    }
+
+
+    .feature-card {
+
+        padding:
+            20px 10px;
+
+    }
+
+
+    .contact-section {
+
+        min-height: auto;
+
+        padding:
+            100px 25px;
+
+    }
+
+
+    .contact-section h2 {
+
+        font-size: 42px;
+
+    }
+
 }
 
-.logo-symbol img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
+
+/* ==========================================================
+   VERY SMALL SCREENS
+   ========================================================== */
+
+@media (max-width: 400px) {
+
+    .hotel-logo h1 {
+
+        font-size: 13px;
+
+    }
+
+
+    .hotel-logo div > span {
+
+        font-size: 6px;
+
+    }
+
+
+    .logo-symbol {
+
+        width: 32px;
+
+        height: 32px;
+
+    }
+
+
+    .welcome-content h2 {
+
+        font-size: 46px;
+
+    }
+
+
+    .about-features {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
 }

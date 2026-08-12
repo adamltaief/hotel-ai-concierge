@@ -518,7 +518,26 @@ const translations = {
             "Ask me anything...",
 
         poweredBy:
-            "AI Concierge"
+            "AI Concierge",
+
+        aboutLabel: "ABOUT SAHARA BEACH",
+
+        aboutTitle:
+            "A Mediterranean Escape for Families and Friends",
+
+        aboutText1:
+            "Sahara Beach AquaPark Resort is located in Monastir, Tunisia, directly on a beautiful sandy beach overlooking the Mediterranean Sea.",
+
+        aboutText2:
+            "Enjoy swimming pools, an AquaPark, restaurants, entertainment, sports activities and relaxing moments for the whole family.",
+
+        featureBeach: "Beach",
+
+        featureAquaPark: "AquaPark",
+
+        featureAllInclusive: "All Inclusive",
+
+        featureEntertainment: "Entertainment",    
 
     },
 
@@ -580,7 +599,26 @@ const translations = {
             "Posez-moi une question...",
 
         poweredBy:
-            "Concierge IA"
+            "Concierge IA" ,
+
+        aboutLabel: "À PROPOS DE SAHARA BEACH",
+
+        aboutTitle:
+            "Une escapade méditerranéenne pour les familles et les amis",
+
+        aboutText1:
+            "Le Sahara Beach AquaPark Resort est situé à Monastir, en Tunisie, directement sur une magnifique plage de sable donnant sur la mer Méditerranée.",
+
+        aboutText2:
+            "Profitez des piscines, de l'AquaPark, des restaurants, des animations, des activités sportives et de moments de détente pour toute la famille.",
+
+        featureBeach: "Plage",
+
+        featureAquaPark: "AquaPark",
+
+        featureAllInclusive: "Tout compris",
+
+        featureEntertainment: "Animations",            
 
     },
 
@@ -642,7 +680,26 @@ const translations = {
             "Fragen Sie mich etwas...",
 
         poweredBy:
-            "KI-Concierge"
+            "KI-Concierge",
+     
+            aboutLabel: "ÜBER SAHARA BEACH",
+
+            aboutTitle:
+                "Eine mediterrane Auszeit für Familien und Freunde",
+
+            aboutText1:
+                "Das Sahara Beach AquaPark Resort befindet sich in Monastir, Tunesien, direkt an einem wunderschönen Sandstrand mit Blick auf das Mittelmeer.",
+
+            aboutText2:
+                "Genießen Sie Swimmingpools, den AquaPark, Restaurants, Unterhaltung, sportliche Aktivitäten und entspannte Momente für die ganze Familie.",
+
+            featureBeach: "Strand",
+
+            featureAquaPark: "AquaPark",
+
+            featureAllInclusive: "All Inclusive",
+
+            featureEntertainment: "Unterhaltung",
 
     },
 
@@ -650,7 +707,7 @@ const translations = {
     Arabic: {
 
         welcomeLabel:
-            "مرحباً بكم في ساحارا بيتش",
+            "مرحباً بكم في صحراء الشاطئ",
 
         titleLine1:
             "عطلتكم",
@@ -692,19 +749,38 @@ const translations = {
             "متاح لمساعدتكم",
 
         chatbotName:
-            "كونسيرج ساحارا بيتش",
+            "كونسيرج صحراء الشاطئ",
 
         online:
             "● متصل",
 
         welcomeMessage:
-            "👋 مرحباً بكم في ساحارا بيتش!<br><br>أنا مساعدكم الذكي.<br>كيف يمكنني مساعدتكم؟",
+            "👋 مرحباً بكم في صحراء الشاطئ<br><br>أنا مساعدكم الذكي.<br>كيف يمكنني مساعدتك",
 
         placeholder:
             "اسألني أي شيء...",
 
         poweredBy:
-            "الكونسيرج الذكي"
+            "الكونسيرج الذكي"   ,
+        
+        aboutLabel: "حول صحارى بيتش",
+
+        aboutTitle:
+            "ملاذ متوسطي للعائلات والأصدقاء",
+
+        aboutText1:
+            "يقع منتجع صحارى بيتش أكوابارك في المنستير، تونس، مباشرة على شاطئ رملي جميل يطل على البحر الأبيض المتوسط.",
+
+        aboutText2:
+            "استمتعوا بمسابح السباحة، والأكوا بارك، والمطاعم، والأنشطة الترفيهية والرياضية، ولحظات من الاسترخاء لجميع أفراد العائلة.",
+
+        featureBeach: "الشاطئ",
+
+        featureAquaPark: "الأكوا بارك",
+
+        featureAllInclusive: "شامل الإقامة",
+
+        featureEntertainment: "الترفيه",
 
     }
 
@@ -762,6 +838,66 @@ function changePageLanguage(language) {
         document.getElementById(
             "welcome-chat-text"
         );
+        // ==========================================================
+// ABOUT SECTION TRANSLATION
+// ==========================================================
+
+const aboutLabel =
+    document.querySelector('[data-i18n="aboutLabel"]');
+
+const aboutTitle =
+    document.querySelector('[data-i18n="aboutTitle"]');
+
+const aboutText1 =
+    document.querySelector('[data-i18n="aboutText1"]');
+
+const aboutText2 =
+    document.querySelector('[data-i18n="aboutText2"]');
+
+const featureBeach =
+    document.querySelector('[data-i18n="featureBeach"]');
+
+const featureAquaPark =
+    document.querySelector('[data-i18n="featureAquaPark"]');
+
+const featureAllInclusive =
+    document.querySelector('[data-i18n="featureAllInclusive"]');
+
+const featureEntertainment =
+    document.querySelector('[data-i18n="featureEntertainment"]');
+
+
+    if (aboutLabel) {
+        aboutLabel.textContent = t.aboutLabel;
+    }
+
+    if (aboutTitle) {
+        aboutTitle.textContent = t.aboutTitle;
+    }
+
+    if (aboutText1) {
+        aboutText1.textContent = t.aboutText1;
+    }
+
+    if (aboutText2) {
+        aboutText2.textContent = t.aboutText2;
+    }
+
+    if (featureBeach) {
+        featureBeach.textContent = t.featureBeach;
+    }
+
+    if (featureAquaPark) {
+        featureAquaPark.textContent = t.featureAquaPark;
+    }
+
+    if (featureAllInclusive) {
+        featureAllInclusive.textContent = t.featureAllInclusive;
+    }
+
+    if (featureEntertainment) {
+        featureEntertainment.textContent = t.featureEntertainment;
+    }
 
 
     if (welcomeLabel) {
