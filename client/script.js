@@ -616,6 +616,27 @@ restaurantSnackText:
 
 restaurantSnackTag:
     "Snacks",
+    roomsLabel: "ROOMS & ACCOMMODATION",
+roomsTitle: "Your Comfortable Home by the Mediterranean",
+roomsDescription: "Relax in comfortable accommodation designed to make your stay at Sahara Beach enjoyable and memorable.",
+
+roomStandardLabel: "COMFORT",
+roomStandardTitle: "Standard Rooms",
+roomStandardText: "Enjoy a comfortable and relaxing space designed for a pleasant stay at the resort.",
+roomComfort: "Comfortable",
+
+roomSeaViewLabel: "SEA VIEW",
+roomSeaViewTitle: "Sea View Rooms",
+roomSeaViewText: "Wake up to the beauty of the Mediterranean and enjoy a relaxing atmosphere during your stay.",
+roomSeaView: "Mediterranean",
+
+roomFamilyLabel: "FAMILY",
+roomFamilyTitle: "Family Accommodation",
+roomFamilyText: "Comfortable accommodation designed for families to enjoy their holiday together.",
+roomFamily: "Family Friendly",
+
+roomsNote: "Our AI Concierge can help you learn more about accommodation and answer your questions about your stay.",
+roomsChatButton: "Ask Concierge",
 
     },
 

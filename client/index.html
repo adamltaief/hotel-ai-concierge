@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Sahara Beach AI Concierge</title>
+    <title>Sahara Beach Aquapark Resort</title>
 
     <link rel="stylesheet" href="welcome.css">
     <link rel="stylesheet" href="style.css">
@@ -32,7 +32,6 @@
 
     <!-- ==================================================
          GLOBAL OVERLAY
-         Covers the entire website
          ================================================== -->
 
     <div class="welcome-overlay"></div>
@@ -46,880 +45,960 @@
 
 
         <!-- ==================================================
-             WELCOME PAGE
+             HEADER
              ================================================== -->
 
-        <div id="welcome-page">
+        <header class="welcome-header">
 
+            <!-- LOGO -->
 
-            <!-- ==================================================
-                 HEADER
-                 ================================================== -->
+            <a
+                href="#home"
+                class="hotel-logo"
+            >
 
-            <header class="welcome-header">
+                <span class="logo-symbol">
 
-
-                <!-- Hotel Logo -->
-
-                <div class="hotel-logo">
-
-                    <span class="logo-symbol">
-
-                        <img
-                            src="images/logo.png"
-                            alt="Sahara Beach Logo"
-                        >
-
-                    </span>
-
-
-                    <div>
-
-                        <h1>
-                            SAHARA BEACH
-                        </h1>
-
-                        <span>
-                            AQUAPARK RESORT
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- ==================================================
-                     NAVIGATION
-                     ================================================== -->
-
-                <nav class="welcome-navigation">
-
-
-                    <a
-                        href="#"
-                        data-i18n="navHome"
-                    >
-                        Home
-                    </a>
-
-
-                    <a
-                        href="#about"
-                        data-i18n="navAbout"
-                    >
-                        About
-                    </a>
-
-
-                    <a
-                        href="#contact"
-                        data-i18n="navContact"
-                    >
-                        Contact
-                    </a>
-
-
-                </nav>
-
-
-
-                <!-- ==================================================
-                     LANGUAGE SELECTOR
-                     ================================================== -->
-
-                <div class="language-selector">
-
-                    <select
-    id="language-selector"
-    aria-label="Choose language"
->
-    <option value="English">
-        English
-    </option>
-
-    <option value="French">
-        Français
-    </option>
-
-    <option value="German">
-        Deutsch
-    </option>
-
-    <option value="Spanish">
-        Español
-    </option>
-
-    <option value="Polish">
-        Polski
-    </option>
-
-    <option value="Arabic">
-        العربية
-    </option>
-</select>
-
-                </div>
-
-
-            </header>
-
-
-
-            <!-- ==================================================
-                 HERO
-                 ================================================== -->
-
-            <section class="welcome-hero">
-
-
-                <div class="welcome-content">
-
-
-                    <!-- Welcome label -->
-
-                    <p
-                        class="welcome-label"
-                        id="welcome-label"
-                    >
-                        WELCOME TO SAHARA BEACH
-                    </p>
-
-
-
-                    <!-- Main title -->
-
-                    <h2 id="welcome-title">
-
-                        Your Mediterranean
-                        <br>
-                        Escape
-
-                    </h2>
-
-
-
-                    <!-- Description -->
-
-                    <p
-                        class="welcome-description"
-                        id="welcome-description"
-                    >
-                        Relax, discover and enjoy an unforgettable
-                        stay by the Mediterranean Sea.
-                    </p>
-
-
-
-                    <!-- Chat button -->
-
-                    <button
-                        class="welcome-chat-button"
-                        id="welcome-chat-button"
-                        onclick="openConcierge()"
+                    <img
+                        src="images/logo.png"
+                        alt="Sahara Beach Logo"
                     >
 
-                        <span id="welcome-chat-text">
-                            Chat with our Concierge
-                        </span>
-
-                        <span class="button-arrow">
-                            →
-                        </span>
-
-                    </button>
-
-
-                </div>
-
-
-            </section>
-
-
-
-            <!-- ==================================================
-                 BOTTOM INFORMATION
-                 ================================================== -->
-
-            <div class="welcome-bottom">
-
+                </span>
 
                 <div>
 
-                    <span
-                        class="info-label"
-                        id="location-label"
-                    >
-                        LOCATION
-                    </span>
+                    <h1>
+                        SAHARA BEACH
+                    </h1>
 
-                    <span id="location-value">
-                        Monastir, Tunisia
+                    <span>
+                        AQUAPARK RESORT
                     </span>
 
                 </div>
 
+            </a>
 
 
-                <div>
+            <!-- NAVIGATION -->
+
+            <nav class="welcome-navigation">
+
+                <a
+                    href="#home"
+                    data-i18n="navHome"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="#about"
+                    data-i18n="navAbout"
+                >
+                    About
+                </a>
+
+                <a
+                    href="#facilities"
+                    data-i18n="navFacilities"
+                >
+                    Facilities
+                </a>
+
+                <a
+                    href="#dining"
+                    data-i18n="navDining"
+                >
+                    Dining
+                </a>
+
+                <a
+                    href="#rooms"
+                    data-i18n="navRooms"
+                >
+                    Rooms
+                </a>
+
+                <a
+                    href="#activities"
+                    data-i18n="navActivities"
+                >
+                    Activities
+                </a>
+
+                <a
+                    href="#contact"
+                    data-i18n="navContact"
+                >
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- LANGUAGE -->
+
+            <div class="language-selector">
+
+                <select
+                    id="language-selector"
+                    aria-label="Choose language"
+                >
+
+                    <option value="English">
+                        English
+                    </option>
+
+                    <option value="French">
+                        Français
+                    </option>
+
+                    <option value="German">
+                        Deutsch
+                    </option>
+
+                    <option value="Spanish">
+                        Español
+                    </option>
+
+                    <option value="Polish">
+                        Polski
+                    </option>
+
+                    <option value="Arabic">
+                        العربية
+                    </option>
+
+                </select>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ==================================================
+             HERO
+             ================================================== -->
+
+        <section
+            id="home"
+            class="welcome-hero"
+        >
+
+            <div class="welcome-content">
+
+                <p
+                    class="welcome-label"
+                    id="welcome-label"
+                    data-i18n="welcomeLabel"
+                >
+                    WELCOME TO SAHARA BEACH
+                </p>
+
+
+                <h2
+                    id="welcome-title"
+                    data-i18n="welcomeTitle"
+                >
+                    Your Mediterranean
+                    <br>
+                    Escape
+                </h2>
+
+
+                <p
+                    class="welcome-description"
+                    id="welcome-description"
+                    data-i18n="welcomeDescription"
+                >
+                    Relax, discover and enjoy an unforgettable
+                    stay by the Mediterranean Sea.
+                </p>
+
+
+                <button
+                    class="welcome-chat-button"
+                    id="welcome-chat-button"
+                    onclick="openConcierge()"
+                >
 
                     <span
-                        class="info-label"
-                        id="experience-label"
+                        id="welcome-chat-text"
+                        data-i18n="welcomeChat"
                     >
-                        EXPERIENCE
+                        Chat with our Concierge
                     </span>
 
-                    <span id="experience-value">
-                        Beach · Relaxation · Hospitality
+                    <span class="button-arrow">
+                        →
                     </span>
 
-                </div>
-
-
-
-                <div>
-
-                    <span
-                        class="info-label"
-                        id="concierge-label"
-                    >
-                        CONCIERGE
-                    </span>
-
-                    <span id="concierge-value">
-                        Available to assist you
-                    </span>
-
-                </div>
-
+                </button>
 
             </div>
 
 
-        </div>
+        </section>
 
 
 
-       <section id="about" class="about-section">
+       <!-- ==================================================
+     ABOUT SAHARA BEACH
+     ================================================== -->
 
+<section id="about" class="about-section">
     <div class="about-container">
-
         <div class="about-content">
-
-            <p
-                class="section-label"
-                data-i18n="aboutLabel"
-            >
+            <p class="section-label" data-i18n="aboutLabel">
                 ABOUT SAHARA BEACH
             </p>
 
             <h2 data-i18n="aboutTitle">
-                A Mediterranean Escape for Families and Friends
+                Your Mediterranean Sanctuary of Sunshine & Smiles
             </h2>
 
             <p data-i18n="aboutText1">
-                Sahara Beach AquaPark Resort is located in Monastir,
-                Tunisia, directly on a beautiful sandy beach overlooking
-                the Mediterranean Sea.
+                Welcome to Sahara Beach AquaPark Resort, a hidden gem nestled along Monastir’s golden coastline. Set within 22 hectares of lush palm gardens directly on the Mediterranean Sea, our 3-star resort seamlessly blends authentic Tunisian charm with warm, genuine hospitality.
             </p>
 
             <p data-i18n="aboutText2">
-                Enjoy swimming pools, an AquaPark, restaurants,
-                entertainment, sports activities and relaxing moments
-                for the whole family.
+                Ideally located just minutes from Monastir (8 km) and Sousse (12 km), and only 4 km from Monastir Airport, we offer the perfect balance of relaxation and adventure. Whether you’re splashing in our thrilling aquapark, savoring international cuisine, or relaxing on the beach, Sahara Beach is designed for creating unforgettable memories with family and friends.
             </p>
-
-            <div class="about-features">
-
-                <div class="feature-card">
-                    <span>🏖️</span>
-                    <h4 data-i18n="featureBeach">Beach</h4>
-                </div>
-
-                <div class="feature-card">
-                    <span>🏊</span>
-                    <h4 data-i18n="featureAquaPark">AquaPark</h4>
-                </div>
-
-                <div class="feature-card">
-                    <span>🍽️</span>
-                    <h4 data-i18n="featureAllInclusive">All Inclusive</h4>
-                </div>
-
-                <div class="feature-card">
-                    <span>🎉</span>
-                    <h4 data-i18n="featureEntertainment">Entertainment</h4>
-                </div>
-
-            </div>
-
         </div>
-
     </div>
-
 </section>
-<!-- ==================================================
-     FACILITIES & SERVICES
-     ================================================== -->
-
-<section id="facilities" class="facilities-section">
-
-    <div class="facilities-container">
-
-        <div class="facilities-heading">
-
-            <p
-                class="section-label"
-                data-i18n="facilitiesLabel"
-            >
-                FACILITIES & SERVICES
-            </p>
-
-            <h2 data-i18n="facilitiesTitle">
-                Everything You Need for a Perfect Stay
-            </h2>
-
-            <p
-                class="facilities-intro"
-                data-i18n="facilitiesDescription"
-            >
-                Discover the facilities and services designed to make
-                your stay at Sahara Beach relaxing, enjoyable and memorable.
-            </p>
-
-        </div>
 
 
-        <div class="facilities-grid">
 
+        <!-- ==================================================
+             FACILITIES
+             ================================================== -->
 
-            <!-- BEACH -->
+        <section
+            id="facilities"
+            class="content-section facilities-section"
+        >
 
-            <div class="facility-card">
+            <div class="section-container">
 
-                <div class="facility-icon">
-                    🏖️
+                <div class="section-heading centered">
+
+                    <p
+                        class="section-label"
+                        data-i18n="facilitiesLabel"
+                    >
+                        FACILITIES & SERVICES
+                    </p>
+
+                    <h2 data-i18n="facilitiesTitle">
+                        Everything You Need
+                        for a Comfortable Stay
+                    </h2>
+
+                    <p
+                        class="section-intro"
+                        data-i18n="facilitiesDescription"
+                    >
+                        Enjoy a range of facilities designed
+                        to make your holiday comfortable,
+                        convenient and enjoyable.
+                    </p>
+
                 </div>
 
-                <div class="facility-content">
 
-                    <h3 data-i18n="facilityBeachTitle">
-                        Beach
-                    </h3>
+                <div class="glass-grid facilities-grid">
 
-                    <p data-i18n="facilityBeachText">
-                        Relax on the beautiful sandy beach and enjoy
-                        the Mediterranean Sea.
-                    </p>
+
+                    <article class="glass-card">
+
+                        <div class="card-icon">
+                            🏖️
+                        </div>
+
+                        <h3 data-i18n="facilityBeachTitle">
+                            Beach
+                        </h3>
+
+                        <p data-i18n="facilityBeachText">
+                            Relax by the sandy Mediterranean
+                            beach and enjoy the seaside atmosphere.
+                        </p>
+
+                    </article>
+
+
+                    <article class="glass-card">
+
+                        <div class="card-icon">
+                            🌊
+                        </div>
+
+                        <h3 data-i18n="facilityAquaTitle">
+                            AquaPark
+                        </h3>
+
+                        <p data-i18n="facilityAquaText">
+                            Enjoy fun water attractions and
+                            refreshing moments for the whole family.
+                        </p>
+
+                    </article>
+
+
+                    <article class="glass-card">
+
+                        <div class="card-icon">
+                            🏊
+                        </div>
+
+                        <h3 data-i18n="facilityPoolTitle">
+                            Swimming Pools
+                        </h3>
+
+                        <p data-i18n="facilityPoolText">
+                            Take a refreshing swim or relax
+                            around the resort's pool areas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="glass-card">
+
+                        <div class="card-icon">
+                            🎾
+                        </div>
+
+                        <h3 data-i18n="facilitySportsTitle">
+                            Sports Facilities
+                        </h3>
+
+                        <p data-i18n="facilitySportsText">
+                            Stay active with sports and
+                            recreational activities during your stay.
+                        </p>
+
+                    </article>
+
+
+                    <article class="glass-card">
+
+                        <div class="card-icon">
+                            🎭
+                        </div>
+
+                        <h3 data-i18n="facilityEntertainmentTitle">
+                            Entertainment
+                        </h3>
+
+                        <p data-i18n="facilityEntertainmentText">
+                            Enjoy activities and entertainment
+                            for different ages and interests.
+                        </p>
+
+                    </article>
+
+
+                    <article class="glass-card">
+
+                        <div class="card-icon">
+                            ✨
+                        </div>
+
+                        <h3 data-i18n="facilityServicesTitle">
+                            Guest Services
+                        </h3>
+
+                        <p data-i18n="facilityServicesText">
+                            Discover convenient services created
+                            to make your holiday more enjoyable.
+                        </p>
+
+                    </article>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <!-- AQUAPARK -->
 
-            <div class="facility-card">
 
-                <div class="facility-icon">
-                    🌊
-                </div>
+        <!-- ==================================================
+             DINING
+             ================================================== -->
 
-                <div class="facility-content">
+        <section
+            id="dining"
+            class="content-section dining-section"
+        >
 
-                    <h3 data-i18n="facilityAquaTitle">
-                        AquaPark
-                    </h3>
+            <div class="section-container">
 
-                    <p data-i18n="facilityAquaText">
-                        Have fun with exciting water attractions
-                        for an unforgettable family experience.
+                <div class="section-heading">
+
+                    <p
+                        class="section-label"
+                        data-i18n="diningLabel"
+                    >
+                        RESTAURANTS & BARS
                     </p>
 
-                </div>
+                    <h2 data-i18n="diningTitle">
+                        Taste the Mediterranean
+                    </h2>
 
-            </div>
-
-
-            <!-- SWIMMING POOLS -->
-
-            <div class="facility-card">
-
-                <div class="facility-icon">
-                    🏊
-                </div>
-
-                <div class="facility-content">
-
-                    <h3 data-i18n="facilityPoolTitle">
-                        Swimming Pools
-                    </h3>
-
-                    <p data-i18n="facilityPoolText">
-                        Enjoy relaxing moments and refreshing swims
-                        in the resort's swimming pools.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- RESTAURANTS -->
-
-            <div class="facility-card">
-
-                <div class="facility-icon">
-                    🍽️
-                </div>
-
-                <div class="facility-content">
-
-                    <h3 data-i18n="facilityRestaurantTitle">
-                        Restaurants
-                    </h3>
-
-                    <p data-i18n="facilityRestaurantText">
-                        Discover delicious meals and enjoy a variety
-                        of dining experiences during your stay.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- SPORTS -->
-
-            <div class="facility-card">
-
-                <div class="facility-icon">
-                    🎾
-                </div>
-
-                <div class="facility-content">
-
-                    <h3 data-i18n="facilitySportsTitle">
-                        Sports & Activities
-                    </h3>
-
-                    <p data-i18n="facilitySportsText">
-                        Stay active and enjoy a range of sports
-                        and activities for all ages.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- ENTERTAINMENT -->
-
-            <div class="facility-card">
-
-                <div class="facility-icon">
-                    🎭
-                </div>
-
-                <div class="facility-content">
-
-                    <h3 data-i18n="facilityEntertainmentTitle">
-                        Entertainment
-                    </h3>
-
-                    <p data-i18n="facilityEntertainmentText">
-                        Enjoy fun entertainment and activities
+                    <p
+                        class="section-intro"
+                        data-i18n="diningDescription"
+                    >
+                        Discover welcoming places to enjoy
+                        meals, drinks and relaxed moments
                         throughout your stay.
                     </p>
 
                 </div>
 
-            </div>
+
+                <div class="dining-grid">
 
 
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==================================================
-     RESTAURANTS & BARS
-     ================================================== -->
-
-<section id="restaurants" class="restaurants-section">
-
-    <div class="restaurants-container">
-
-        <div class="restaurants-heading">
-
-            <p
-                class="section-label"
-                data-i18n="restaurantsLabel"
-            >
-                RESTAURANTS & BARS
-            </p>
-
-            <h2 data-i18n="restaurantsTitle">
-                Taste the Mediterranean
-            </h2>
-
-            <p
-                class="restaurants-intro"
-                data-i18n="restaurantsDescription"
-            >
-                Enjoy delicious dining experiences and discover
-                a variety of flavors during your stay at Sahara Beach.
-            </p>
-
-        </div>
+                    <article class="dining-card large">
 
 
-        <div class="restaurants-grid">
+                        <div class="dining-icon">
+                            🍽️
+                        </div>
+
+                        <h3 data-i18n="diningMainTitle">
+                            Main Restaurant
+                        </h3>
+
+                        <p data-i18n="diningMainText">
+                            Enjoy a variety of meals and flavors
+                            in a welcoming setting for guests
+                            of all ages.
+                        </p>
+
+                        <span
+                            class="card-tag"
+                            data-i18n="diningMainTag"
+                        >
+                            Dining
+                        </span>
+
+                    </article>
 
 
-            <!-- RESTAURANT -->
-
-            <div class="restaurant-card">
-
-                <div class="restaurant-icon">
-                    🍽️
-                </div>
-
-                <div class="restaurant-content">
-
-                    <h3 data-i18n="restaurantMainTitle">
-                        Main Restaurant
-                    </h3>
-
-                    <p data-i18n="restaurantMainText">
-                        Enjoy a variety of meals and flavors in a
-                        welcoming setting for the whole family.
-                    </p>
-
-                </div>
-
-                <span
-                    class="restaurant-tag"
-                    data-i18n="restaurantDiningTag"
-                >
-                    Dining
-                </span>
-
-            </div>
+                    <article class="dining-card">
 
 
-            <!-- BAR -->
+                        <div class="dining-icon">
+                            🍹
+                        </div>
 
-            <div class="restaurant-card">
+                        <h3 data-i18n="diningBarTitle">
+                            Bars
+                        </h3>
 
-                <div class="restaurant-icon">
-                    🍹
-                </div>
+                        <p data-i18n="diningBarText">
+                            Relax with a refreshing drink and
+                            enjoy pleasant moments throughout
+                            the day.
+                        </p>
 
-                <div class="restaurant-content">
+                        <span
+                            class="card-tag"
+                            data-i18n="diningBarTag"
+                        >
+                            Refreshments
+                        </span>
 
-                    <h3 data-i18n="restaurantBarTitle">
-                        Bars
-                    </h3>
+                    </article>
 
-                    <p data-i18n="restaurantBarText">
-                        Relax with a refreshing drink and enjoy
-                        pleasant moments throughout the day.
-                    </p>
+
+                    <article class="dining-card">
+
+
+                        <div class="dining-icon">
+                            🍕
+                        </div>
+
+                        <h3 data-i18n="diningSnackTitle">
+                            Snacks
+                        </h3>
+
+                        <p data-i18n="diningSnackText">
+                            Take a break between activities
+                            and enjoy something tasty.
+                        </p>
+
+                        <span
+                            class="card-tag"
+                            data-i18n="diningSnackTag"
+                        >
+                            Snacks
+                        </span>
+
+                    </article>
 
                 </div>
-
-                <span
-                    class="restaurant-tag"
-                    data-i18n="restaurantBarTag"
-                >
-                    Refreshments
-                </span>
 
             </div>
 
+        </section>
 
-            <!-- SNACKS -->
-
-            <div class="restaurant-card">
-
-                <div class="restaurant-icon">
-                    🍕
-                </div>
-
-                <div class="restaurant-content">
-
-                    <h3 data-i18n="restaurantSnackTitle">
-                        Snacks
-                    </h3>
-
-                    <p data-i18n="restaurantSnackText">
-                        Take a break and enjoy something tasty
-                        between your activities.
-                    </p>
-
-                </div>
-
-                <span
-                    class="restaurant-tag"
-                    data-i18n="restaurantSnackTag"
-                >
-                    Snacks
-                </span>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
 
 
         <!-- ==================================================
-             CONTACT SECTION PLACEHOLDER
+             ROOMS
              ================================================== -->
 
-       <!-- ==================================================
-     CONTACT SECTION
-     ================================================== -->
+        <section
+            id="rooms"
+            class="content-section rooms-section"
+        >
 
-<!-- ==================================================
-     CONTACT SECTION
-     ================================================== -->
+            <div class="section-container">
 
-<section id="contact" class="contact-section">
+                <div class="rooms-layout">
 
-    <div class="contact-container">
+                    <div class="rooms-heading">
 
-        <!-- HEADER -->
+                        <p
+                            class="section-label"
+                            data-i18n="roomsLabel"
+                        >
+                            ROOMS & ACCOMMODATION
+                        </p>
 
-        <div class="contact-heading">
+                        <h2 data-i18n="roomsTitle">
+                            Your Space to Relax
+                        </h2>
 
-            <p
-                class="section-label"
-                data-i18n="contactLabel"
-            >
-                CONTACT
-            </p>
+                        <p
+                            class="section-intro"
+                            data-i18n="roomsDescription"
+                        >
+                            Comfortable accommodation gives you
+                            the perfect place to rest and recharge
+                            after a day by the sea.
+                        </p>
 
-            <h2 data-i18n="contactTitle">
-                We're Here for You
-            </h2>
+                        <button
+                            class="outline-button"
+                            onclick="openConcierge()"
+                        >
 
-            <p
-                class="contact-description"
-                data-i18n="contactDescription"
-            >
-                Whether you need assistance before your arrival
-                or during your stay, our team is always happy to help.
-            </p>
+                            <span data-i18n="roomsButton">
+                                Ask our Concierge
+                            </span>
 
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="rooms-features">
+
+
+                        <div class="room-feature">
+
+                            <span>
+                                🛏️
+                            </span>
+
+                            <div>
+
+                                <h3 data-i18n="roomComfortTitle">
+                                    Comfortable Rooms
+                                </h3>
+
+                                <p data-i18n="roomComfortText">
+                                    A welcoming space where you
+                                    can relax after your activities.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="room-feature">
+
+                            <span>
+                                🌅
+                            </span>
+
+                            <div>
+
+                                <h3 data-i18n="roomAtmosphereTitle">
+                                    Holiday Atmosphere
+                                </h3>
+
+                                <p data-i18n="roomAtmosphereText">
+                                    Enjoy a peaceful environment
+                                    suited to a relaxing getaway.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="room-feature">
+
+                            <span>
+                                👨‍👩‍👧‍👦
+                            </span>
+
+                            <div>
+
+                                <h3 data-i18n="roomFamilyTitle">
+                                    Family Friendly
+                                </h3>
+
+                                <p data-i18n="roomFamilyText">
+                                    Accommodation designed to
+                                    welcome families and groups.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             ACTIVITIES
+             ================================================== -->
+
+        <section
+            id="activities"
+            class="content-section activities-section"
+        >
+
+            <div class="section-container">
+
+                <div class="section-heading centered">
+
+                    <p
+                        class="section-label"
+                        data-i18n="activitiesLabel"
+                    >
+                        ACTIVITIES & ENTERTAINMENT
+                    </p>
+
+                    <h2 data-i18n="activitiesTitle">
+                        Make Every Day Part of the Holiday
+                    </h2>
+
+                    <p
+                        class="section-intro"
+                        data-i18n="activitiesDescription"
+                    >
+                        From active moments to relaxing experiences,
+                        discover ways to enjoy your time at Sahara Beach.
+                    </p>
+
+                </div>
+
+
+                <div class="activity-grid">
+
+
+                    <article class="activity-card">
+
+                        <span class="activity-icon">
+                            ⚽
+                        </span>
+
+                        <h3 data-i18n="activitySportsTitle">
+                            Sports
+                        </h3>
+
+                        <p data-i18n="activitySportsText">
+                            Keep active and enjoy recreational
+                            sports during your holiday.
+                        </p>
+
+                    </article>
+
+
+                    <article class="activity-card">
+
+                        <span class="activity-icon">
+                            🎉
+                        </span>
+
+                        <h3 data-i18n="activityEntertainmentTitle">
+                            Entertainment
+                        </h3>
+
+                        <p data-i18n="activityEntertainmentText">
+                            Enjoy fun moments and entertainment
+                            suitable for different ages.
+                        </p>
+
+                    </article>
+
+
+                    <article class="activity-card">
+
+                        <span class="activity-icon">
+                            👨‍👩‍👧‍👦
+                        </span>
+
+                        <h3 data-i18n="activityFamilyTitle">
+                            Family Time
+                        </h3>
+
+                        <p data-i18n="activityFamilyText">
+                            Create memorable moments together
+                            with activities for the whole family.
+                        </p>
+
+                    </article>
+
+
+                    <article class="activity-card">
+
+                        <span class="activity-icon">
+                            🌴
+                        </span>
+
+                        <h3 data-i18n="activityRelaxTitle">
+                            Relaxation
+                        </h3>
+
+                        <p data-i18n="activityRelaxText">
+                            Slow down, enjoy the surroundings
+                            and make time for yourself.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             CONTACT
+             ================================================== -->
+
+        <section
+            id="contact"
+            class="content-section contact-section"
+        >
+
+            <div class="section-container">
+
+                <div class="contact-box">
+
+                    <div class="contact-main">
+
+                        <p
+                            class="section-label"
+                            data-i18n="contactLabel"
+                        >
+                            CONTACT
+                        </p>
+
+                        <h2 data-i18n="contactTitle">
+                            We're Here to Help
+                        </h2>
+
+                        <p
+                            class="contact-description"
+                            data-i18n="contactDescription"
+                        >
+                            Have a question about the resort,
+                            your stay or the experiences available?
+                            Our concierge is ready to assist you.
+                        </p>
+
+
+                        <button
+                            class="welcome-chat-button"
+                            onclick="openConcierge()"
+                        >
+
+                            <span data-i18n="contactButton">
+                                Chat with our Concierge
+                            </span>
+
+                            <span class="button-arrow">
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="contact-details">
+
+
+                        <div class="contact-item">
+
+                            <span class="contact-icon">
+                                📍
+                            </span>
+
+                            <div>
+
+                                <span
+                                    class="contact-label"
+                                    data-i18n="contactLocationLabel"
+                                >
+                                    LOCATION
+                                </span>
+
+                                <strong data-i18n="contactLocation">
+                                    Monastir, Tunisia
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <span class="contact-icon">
+                                🌊
+                            </span>
+
+                            <div>
+
+                                <span
+                                    class="contact-label"
+                                    data-i18n="contactExperienceLabel"
+                                >
+                                    EXPERIENCE
+                                </span>
+
+                                <strong data-i18n="contactExperience">
+                                    Beach · Family · Relaxation
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <span class="contact-icon">
+                                💬
+                            </span>
+
+                            <div>
+
+                                <span
+                                    class="contact-label"
+                                    data-i18n="contactConciergeLabel"
+                                >
+                                    CONCIERGE
+                                </span>
+
+                                <strong data-i18n="contactConcierge">
+                                    Ready to assist you
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+<!-- TRUST & AWARDS SECTION -->
+<section class="awards-section">
+    <h2 class="awards-section-title" data-i18n="awardsSectionTitle">
+        OUR AWARDS & CERTIFICATIONS
+    </h2>
+    <div class="awards-container">
+        
+        <!-- TUI Global Hotel Award -->
+        <div class="award-card">
+            <div class="award-img-wrapper">
+                <img src="images/GHA26_Social Badge_QUALITY_1.png" alt="TUI Global Hotel Award Quality" class="award-img" />
+            </div>
+            <span class="award-title" data-i18n="awardTui">TUI Global Hotel Award</span>
         </div>
 
-
-        <!-- CONTACT INFORMATION -->
-
-        <div class="contact-grid">
-
-
-            <!-- PHONE -->
-
-            <div class="contact-card">
-
-                <div class="contact-card-top">
-
-                    <div class="contact-icon">
-                        <span>☎</span>
-                    </div>
-
-                    <span
-                        class="contact-number"
-                    >
-                        01
-                    </span>
-
-                </div>
-
-                <div class="contact-card-body">
-
-                    <p
-                        class="contact-card-label"
-                        data-i18n="contactPhoneLabel"
-                    >
-                        PHONE
-                    </p>
-
-                    <h3>
-                        +216 XX XXX XXX
-                    </h3>
-
-                    <p
-                        class="contact-card-text"
-                        data-i18n="contactPhoneText"
-                    >
-                        Contact our hotel team for assistance.
-                    </p>
-
-                </div>
-
-                <div class="contact-card-line"></div>
-
+        <!-- HolidayCheck Award -->
+        <div class="award-card">
+            <div class="award-img-wrapper">
+                <img src="images/HolidayCheck-Award-2025-Floresta-1.png" alt="HolidayCheck Award 2025" class="award-img" />
             </div>
-
-
-
-            <!-- EMAIL -->
-
-            <div class="contact-card">
-
-                <div class="contact-card-top">
-
-                    <div class="contact-icon">
-                        <span>✉</span>
-                    </div>
-
-                    <span
-                        class="contact-number"
-                    >
-                        02
-                    </span>
-
-                </div>
-
-                <div class="contact-card-body">
-
-                    <p
-                        class="contact-card-label"
-                        data-i18n="contactEmailLabel"
-                    >
-                        EMAIL
-                    </p>
-
-                    <h3>
-                        info@saharabeach.com
-                    </h3>
-
-                    <p
-                        class="contact-card-text"
-                        data-i18n="contactEmailText"
-                    >
-                        Send us your questions or requests.
-                    </p>
-
-                </div>
-
-                <div class="contact-card-line"></div>
-
-            </div>
-
-
-
-            <!-- LOCATION -->
-
-            <div class="contact-card">
-
-                <div class="contact-card-top">
-
-                    <div class="contact-icon">
-                        <span>⌖</span>
-                    </div>
-
-                    <span
-                        class="contact-number"
-                    >
-                        03
-                    </span>
-
-                </div>
-
-                <div class="contact-card-body">
-
-                    <p
-                        class="contact-card-label"
-                        data-i18n="contactLocationLabel"
-                    >
-                        LOCATION
-                    </p>
-
-                    <h3>
-                        Monastir, Tunisia
-                    </h3>
-
-                    <p
-                        class="contact-card-text"
-                        data-i18n="contactLocationText"
-                    >
-                        Sahara Beach AquaPark Resort,
-                        Monastir, Tunisia.
-                    </p>
-
-                </div>
-
-                <div class="contact-card-line"></div>
-
-            </div>
-
-
+            <span class="award-title" data-i18n="awardHolidayCheck">HolidayCheck Award 2025</span>
         </div>
 
-
-
-        <!-- AI CONCIERGE CTA -->
-
-        <div class="contact-concierge">
-
-            <div class="concierge-icon">
-                🌴
+        <!-- Intertek Cristal Certifications -->
+        <div class="award-card award-card-wide">
+            <div class="award-img-wrapper contain-wrapper">
+                <img src="images/cristal-logo.webp" alt="Intertek Cristal Standards" class="award-img contain-img" />
             </div>
-
-
-            <div class="concierge-content">
-
-                <p
-                    class="concierge-label"
-                    data-i18n="contactCtaLabel"
-                >
-                    AI CONCIERGE
-                </p>
-
-                <h3 data-i18n="contactCtaTitle">
-                    Need help right now?
-                </h3>
-
-                <p data-i18n="contactCtaText">
-                    Chat with our AI Concierge and get instant
-                    answers about the hotel, facilities,
-                    restaurants and more.
-                </p>
-
-            </div>
-
-
-            <button
-                class="contact-chat-button"
-                onclick="openConcierge()"
-            >
-
-                <span data-i18n="contactCtaButton">
-                    Chat with Concierge
-                </span>
-
-                <span class="contact-arrow">
-                    →
-                </span>
-
-            </button>
-
+            <span class="award-title" data-i18n="awardCristalTitle">Intertek Cristal Standards</span>
         </div>
 
     </div>
-
 </section>
 
+        <!-- ==================================================
+             FOOTER
+             ================================================== -->
+
+        <footer class="site-footer">
+
+            <div class="footer-logo">
+
+                <span>
+                    SAHARA BEACH
+                </span>
+
+                <small>
+                    AQUAPARK RESORT
+                </small>
+
+            </div>
+
+
+            <p data-i18n="footerText">
+                Your Mediterranean escape in Monastir, Tunisia.
+            </p>
+
+
+            <span class="footer-copy">
+                © Sahara Beach AquaPark Resort
+            </span>
+
+        </footer>
 
     </main>
 
@@ -946,20 +1025,13 @@
     <div class="chat-box">
 
 
-        <!-- ==================================================
-             CHAT HEADER
-             ================================================== -->
-
         <div class="chat-header">
 
-
             <div class="assistant-info">
-
 
                 <div class="assistant-avatar">
                     🌴
                 </div>
-
 
                 <div>
 
@@ -973,12 +1045,8 @@
 
                 </div>
 
-
             </div>
 
-
-
-            <!-- Close button -->
 
             <button
                 class="close-chat"
@@ -988,30 +1056,19 @@
                 ×
             </button>
 
-
         </div>
 
 
 
-        <!-- ==================================================
-             MESSAGES
-             ================================================== -->
-
         <div class="messages">
 
-
-            <!-- Initial bot message -->
-
             <div class="bot-message">
-
 
                 <div class="message-avatar">
                     🌴
                 </div>
 
-
                 <div class="message-content">
-
 
                     <span
                         class="message-name"
@@ -1020,39 +1077,26 @@
                         Sahara Beach Concierge
                     </span>
 
-
                     <p id="welcome-message">
 
                         👋 Welcome to Sahara Beach!
 
-                        <br>
-                        <br>
+                        <br><br>
 
                         I'm your AI concierge.
-
-                        <br>
-
                         How can I help you?
 
                     </p>
 
-
                 </div>
 
-
             </div>
-
 
         </div>
 
 
 
-        <!-- ==================================================
-             CHAT INPUT
-             ================================================== -->
-
         <div class="chat-input">
-
 
             <input
                 id="chat-input"
@@ -1060,7 +1104,6 @@
                 placeholder="Ask me anything..."
                 autocomplete="off"
             >
-
 
             <button
                 id="send-button"
@@ -1070,14 +1113,8 @@
                 ➤
             </button>
 
-
         </div>
 
-
-
-        <!-- ==================================================
-             POWERED BY
-             ================================================== -->
 
         <div
             class="powered-by"
@@ -1086,17 +1123,11 @@
             AI Concierge
         </div>
 
-
     </div>
 
 
 
-    <!-- ==================================================
-         JAVASCRIPT
-         ================================================== -->
-
     <script src="script.js"></script>
-
 
 </body>
 

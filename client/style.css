@@ -1375,3 +1375,894 @@ border-radius: 16px;
     }
 
 }
+/* ==========================================================
+   ROOMS & ACCOMMODATION
+   ========================================================== */
+
+.rooms-section {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 130px 8% 140px;
+
+    color: white;
+
+    box-sizing: border-box;
+
+}
+
+
+.rooms-container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+}
+
+
+/* ==========================================================
+   HEADING
+   ========================================================== */
+
+.rooms-heading {
+
+    max-width: 700px;
+
+    margin-bottom: 60px;
+
+}
+
+
+.rooms-heading .section-label {
+
+    margin-bottom: 18px;
+
+}
+
+
+.rooms-heading h2 {
+
+    margin: 0 0 24px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(
+        46px,
+        6vw,
+        76px
+    );
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+.rooms-intro {
+
+    max-width: 570px;
+
+    margin: 0;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.72
+        );
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   ROOM GRID
+   ========================================================== */
+
+.rooms-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* ==========================================================
+   ROOM CARD
+   ========================================================== */
+
+.room-card {
+
+    position: relative;
+
+    min-height: 360px;
+
+    padding: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.25
+        );
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.10
+        );
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            0,
+            0,
+            0,
+            0.10
+        );
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+
+    overflow: hidden;
+
+}
+
+
+.room-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(
+            244,
+            213,
+            141,
+            0.65
+        );
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.16
+        );
+
+    box-shadow:
+        0 20px 45px
+        rgba(
+            0,
+            0,
+            0,
+            0.15
+        );
+
+}
+
+
+/* ==========================================================
+   CARD TOP
+   ========================================================== */
+
+.room-card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 55px;
+
+}
+
+
+.room-icon {
+
+    width: 56px;
+
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(
+            244,
+            213,
+            141,
+            0.55
+        );
+
+    border-radius: 50%;
+
+    font-size: 23px;
+
+}
+
+
+.room-number {
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.28
+        );
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* ==========================================================
+   CARD CONTENT
+   ========================================================== */
+
+.room-card-content {
+
+    flex: 1;
+
+}
+
+
+.room-label {
+
+    margin:
+        0 0 10px;
+
+    color:
+        #f4d58d;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+}
+
+
+.room-card-content h3 {
+
+    margin:
+        0 0 15px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+}
+
+
+.room-card-content p {
+
+    max-width: 300px;
+
+    margin: 0;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.66
+        );
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   CARD FOOTER
+   ========================================================== */
+
+.room-card-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.16
+        );
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.65
+        );
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.room-card-footer span:last-child {
+
+    color:
+        #f4d58d;
+
+    font-size: 17px;
+
+    transition:
+        transform 0.25s ease;
+
+}
+
+
+.room-card:hover
+.room-card-footer span:last-child {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* ==========================================================
+   BOTTOM NOTE
+   ========================================================== */
+
+.rooms-note {
+
+    margin-top: 25px;
+
+    padding:
+        24px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.20
+        );
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+}
+
+
+.rooms-note-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(
+            244,
+            213,
+            141,
+            0.45
+        );
+
+    border-radius: 50%;
+
+    color:
+        #f4d58d;
+
+}
+
+
+.rooms-note p {
+
+    flex: 1;
+
+    margin: 0;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.65
+        );
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+}
+
+
+.rooms-chat-button {
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        9px 9px 9px 17px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.30
+        );
+
+    border-radius: 30px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    color: white;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.rooms-chat-button:hover {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.16
+        );
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.rooms-chat-button span:last-child {
+
+    width: 28px;
+
+    height: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #f4d58d;
+
+    color:
+        #173b42;
+
+    font-size: 14px;
+
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .rooms-section {
+
+        padding:
+            100px 7% 110px;
+
+    }
+
+
+    .rooms-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .room-card:last-child {
+
+        grid-column:
+            span 2;
+
+    }
+
+
+    .rooms-note {
+
+        flex-wrap:
+            wrap;
+
+    }
+
+
+    .rooms-note p {
+
+        min-width:
+            calc(100% - 70px);
+
+    }
+
+
+    .rooms-chat-button {
+
+        margin-left:
+            60px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+    .rooms-section {
+
+        padding:
+            85px 25px 100px;
+
+    }
+
+
+    .rooms-heading {
+
+        margin-bottom:
+            45px;
+
+    }
+
+
+    .rooms-heading h2 {
+
+        font-size:
+            48px;
+
+    }
+
+
+    .rooms-intro {
+
+        font-size:
+            14px;
+
+    }
+
+
+    .rooms-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .room-card {
+
+        min-height:
+            330px;
+
+        padding:
+            25px;
+
+    }
+
+
+    .room-card:last-child {
+
+        grid-column:
+            auto;
+
+    }
+
+
+    .room-card-top {
+
+        margin-bottom:
+            45px;
+
+    }
+
+
+    .room-card-content h3 {
+
+        font-size:
+            25px;
+
+    }
+
+
+    .rooms-note {
+
+        padding:
+            22px;
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .rooms-note p {
+
+        min-width:
+            0;
+
+    }
+
+
+    .rooms-chat-button {
+
+        margin-left:
+            0;
+
+    }
+
+}
+.awards-section {
+    /* Subtle ambient overlay so text remains legible over background images */
+    background: rgba(255, 255, 255, 0); 
+    padding: 3rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+.awards-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Glassmorphism Card Style */
+.award-card {
+    /* Semi-transparent white background */
+    background: rgba(255, 255, 255, 0.082);
+    
+    /* Frosted glass blur effect */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    
+    /* Glass border highlighting */
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    padding: 1.75rem 1.25rem;
+    
+    /* Identical card dimensions */
+    flex: 1 1 300px;
+    max-width: 320px;
+    min-height: 240px; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.award-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Logo Wrappers */
+.award-img-wrapper {
+    width: 100%;
+    height: 90px;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.award-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    /* Optional shadow to pop non-transparent badge images */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08)); 
+}
+
+.award-img.contain-img {
+    object-fit: contain;
+}
+
+/* Typography (Adjusted colors for clear contrast on frosted cards) */
+.award-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff; /* Dark slate for high readability */
+    margin-bottom: 0.35rem;
+}
+
+.award-subtitle {
+    font-size: 0.72rem;
+    color: #ffffff;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-top: auto;
+    
+}
+
+/* ==========================================
+   MOBILE & TABLET RESPONSIVE
+   ========================================== */
+@media (max-width: 768px) {
+    .awards-section {
+        padding: 2rem 1rem;
+    }
+
+    .awards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .award-card {
+        width: 100%;
+        max-width: 320px;
+        min-height: auto;
+        padding: 1.5rem 1rem;
+    }
+
+    .award-img-wrapper {
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+}
+.awards-section-title {
+    text-align: center;
+    color: #f4d58d;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+     margin-left: 25px;
+        margin-right: 25px;
+
+        margin-bottom: 70px;
+
+    opacity: 0.95;
+    
+}
+
+@media (max-width: 768px) {
+    .awards-section-title {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+}
